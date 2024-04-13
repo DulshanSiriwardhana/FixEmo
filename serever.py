@@ -19,7 +19,6 @@ label_encoder = LabelEncoder()
 label_encoder.classes_ = np.load('label_encoder_classes.npy', allow_pickle=True)
 
 
-# Define function to predict emotion
 def predict_emotion(text):
     text_sequence = tokenizer.texts_to_sequences([text])
     padded_sequence = pad_sequences(text_sequence, maxlen=100)
